@@ -74,7 +74,7 @@ SUITE(DecryptTest)
    TEST_FIXTURE(KeyAB_fixture, LargeLetters) {
         wstring cipher_text = L"АГВЕДЖЁИЗКЙМЛОНРПТСФУЦХШЧЪЩЬЫЮЭАЯ";
         wstring result_correct = L"АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
-        CHECK_EQUAL(true, result_correct == pointer->decrypt(cipher_text));
+        CHECK_EQUAL(true, result_correct == pointer->decrypt(cipher_text));//если  результат раскодирования равен ожидаемому результату, то возвращается true
     }
     TEST_FIXTURE(KeyAB_fixture, Smallletters) {
         wstring cipher_text = L"агведжёизкймлонрптсфуцхшчъщьыюэая";
