@@ -6,14 +6,15 @@
 
 
 using namespace std;
-string wst (int k, wstring s1)
+string wst (int k, wstring s1) //для тестов кодировки. k-ключ. s1-строка для кодировки
 {
     PerestanCipher w(k);
     wstring s=w.CoderPerestanCipher(w, s1);
-    const string s2 (s.begin(), s.end() );
+    const string s2 (s.begin(), s.end() );//Функция begin () возвращает итератор, который указывает на первый элемент контейнера
+    //Функция end () возвращает итератор, который указывает на конец контейнера. 
     return s2;
 }
-string wst1 (int k, wstring s1)
+string wst1 (int k, wstring s1) // для тестов раскодировки. k-ключ. s1-строка для раскодировки
 {
     PerestanCipher w(k);
     wstring s=w.DecoderPerestanCipher(k, s1);
